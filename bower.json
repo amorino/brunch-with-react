@@ -1,0 +1,24 @@
+{
+    "name": "mrchichiwang",
+    "version": "0.0.0",
+    "description": "React Template with Brunch",
+    "main": "public/javascripts/app.js",
+    "private": true,
+    "dependencies": {
+        "console-polyfill": "~0.1.0",
+        "normalize-css": "~2.1.2",
+        "react": "*",
+        "javascript-state-machine": "~2.3.0",
+        "react-router": "*",
+        "modernizr": "~2.8.3",
+        "reflux": "~0.2.7"
+    },
+    "overrides": {
+        "react": {
+            "main": "react-with-addons.min.js"
+        },
+        "modernizr": {
+            "main": "modernizr.js"
+        }
+    }
+}

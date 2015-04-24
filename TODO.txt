@@ -1,0 +1,26 @@
+NOTES:
+
+[ ] FavIcon
+[ ] Transparent background pages
+[ ] Single background for app
+[ ] Stagger build animation for page contents
+
+[ ] Add webkit smooth scrolling for ios
+
+-------
+
+TODO:
+
+ [X] Prove page transitions
+ [ ] Block out primary elements and transitions
+ [ ] Header and Navigation Menu
+ [ ] Block out pages:
+   [ ] Home
+   	 [ ] Simple logo
+   	 [ ] Name, bit of info
+   	 [ ] A creative way to surface skills? Maybe use canvas/phaser?
+   [ ] (Work)
+     [ ] Material design (component blocks with properties)
+   [ ] Endorsements (LinkedIn)
+   [ ] Resume (Link-out resume.mrchichiwang.com + pdf d/l)
+ [ ] Wireframe mode - full functionality

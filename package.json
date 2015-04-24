@@ -1,0 +1,28 @@
+{
+  "name": "brunch",
+  "version": "0.1.0",
+  "description": "Template for Brunch with React / Reflux",
+  "main": "app.js",
+  "scripts": {
+    "install": "bower install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": false,
+  "authors": [
+    "Erick Bazan <erick@foostudio.com>"
+  ],
+  "dependencies": {
+    "auto-reload-brunch": "~1.7.6",
+    "clean-css-brunch": "~1.7.1",
+    "brunch": "*",
+    "traceur-brunch": "*",
+    "auto-reload-brunch": "*",
+    "cjsx-brunch": "*",
+    "css-brunch": "*",
+    "javascript-brunch": "*",
+    "uglify-js-brunch": "*",
+    "reflux": "~0.2.7",
+    "sass-brunch": "~1.8.9"
+  },
+  "devDependencies": {}
+}
