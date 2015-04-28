@@ -11,7 +11,7 @@ Home = React.createClass
 		styles['padding-top'] = if hH then hH else 0
 
 		<div className="hero-unit" style={styles}>
-        	<h1>'Allo, 'Allo!</h1>
+        	<h1>React - Flux in Coffee</h1>
         	<p>Home</p>
         	<ul>
             	<li>Foo (Studio)</li>

@@ -9,6 +9,7 @@ exports.config =
 				'javascripts/vendor.js': /^(?!app)/
 			order:
 				before: [
+					'bower_components/jquery/dist/jquery.js',
 					'bower_components/react/react-with-addons.min.js'
 				]
 		stylesheets:

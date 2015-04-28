@@ -1,7 +1,7 @@
 {
-  "name": "brunch",
-  "version": "0.1.0",
-  "description": "Template for Brunch with React / Reflux",
+  "name": "brunch-with-react",
+  "version": "0.0.0",
+  "description": "React Template with Brunch",
   "main": "app.js",
   "scripts": {
     "install": "bower install",
@@ -21,8 +21,8 @@
     "css-brunch": "*",
     "javascript-brunch": "*",
     "uglify-js-brunch": "*",
-    "reflux": "~0.2.7",
-    "sass-brunch": "~1.8.9"
+    "sass-brunch": "~1.8.9",
+    "react-memory-stats" : "~0.2.0"
   },
   "devDependencies": {}
 }

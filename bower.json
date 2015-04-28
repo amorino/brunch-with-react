@@ -1,9 +1,12 @@
 {
-    "name": "mrchichiwang",
+    "name": "brunch-with-react",
     "version": "0.0.0",
     "description": "React Template with Brunch",
-    "main": "public/javascripts/app.js",
     "private": true,
+    "authors": [
+        "Erick Bazán <erick@foostudio.com>"
+    ],
+    "license": "MIT",
     "dependencies": {
         "console-polyfill": "~0.1.0",
         "normalize-css": "~2.1.2",
@@ -11,7 +14,20 @@
         "javascript-state-machine": "~2.3.0",
         "react-router": "*",
         "modernizr": "~2.8.3",
-        "reflux": "~0.2.7"
+        "bootstrap-sass": "~3.3.4",
+        "jquery": "~2",
+        "h5bp-helpers": "~0.1",
+        "font-awesome": "~4",
+        "isMobile": "~0.3.5",
+        "gsap": "~1.15.1",
+        "moment": "~2.9.0",
+        "mathjs": "~1.2.0",
+        "bowser": "~0.7.2",
+        "memory-stats": "*",
+        "neat": "~1.7.1",
+        "bourbon": "4.2.1",
+        "pixi.js": "~2.2.8",
+        "howl": "~0.0.2"
     },
     "overrides": {
         "react": {

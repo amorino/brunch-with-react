@@ -2,12 +2,14 @@
 'use strict'
 
 # Stores
+
 SiteConst = require 'components/site/const'
 SiteActions = require 'components/site/actions'
 SiteStore = require 'components/site/store'
 
 # Helpers and utilities
 SyncState = require 'util/mixins/syncstate'
+Init = require 'util/init'
 
 # Routing
 Router = window.ReactRouter
@@ -31,7 +33,6 @@ Root = React.createClass
 	render: ->
 		# console.log 'render', @state
 		# Determine page-slide transition direction
-		
 		<div id="Root">
 			<Header />
 			<TransitionGroup transitionName="page">
@@ -41,6 +42,7 @@ Root = React.createClass
 
 	componentDidMount: ->
 		SiteActions.call null, SiteConst.SET_HEADER_HEIGHT, document.getElementById('Header').getBoundingClientRect().height
+
 # Route Definitions
 routes = (
   <Route name="app" handler={Root} path="/">
@@ -51,6 +53,7 @@ routes = (
     <Redirect from="/" to="home" />
   </Route>
 )
+
 Router.run routes, (Handler) ->
 	React.render <Handler />, document.getElementById('content')
 
