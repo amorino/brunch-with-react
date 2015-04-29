@@ -9,7 +9,6 @@ SiteStore = require 'components/site/store'
 
 # Helpers and utilities
 SyncState = require 'util/mixins/syncstate'
-Init = require 'util/init'
 
 # Routing
 Router = window.ReactRouter
@@ -54,7 +53,7 @@ routes = (
   </Route>
 )
 
-Router.run routes, (Handler) ->
+Router.run routes, Router.HistoryLocation,  (Handler) ->
 	React.render <Handler />, document.getElementById('content')
 
 # Successfully required in

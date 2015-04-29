@@ -2,6 +2,9 @@ exports.config =
 	plugins:
 		react:
 			autoIncludeCommentBlock: yes
+		sass:
+			options:
+				includePaths: ['bower_components/bootstrap-sass/assets/stylesheets']
 	files:
 		javascripts:
 			joinTo:
@@ -13,4 +16,7 @@ exports.config =
 					'bower_components/react/react-with-addons.min.js'
 				]
 		stylesheets:
-			joinTo: 'stylesheets/app.css'
+      		defaultExtension: 'scss'
+      		joinTo: 
+        		'styles/app.css': /^(app)/
+        		'styles/vendor.css': /^(?!app)/

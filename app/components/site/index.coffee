@@ -3,7 +3,18 @@ Store = require './store'
 Actions = require './actions'
 Constant = require './const'
 
+Facebook = require 'lib/facebook'
+Data = require 'Data'
+Share = require 'lib/share'
+Breakpoint = require 'lib/breakpoints'
+AuthManager = require 'lib/AuthManager'
+AudioManager = require 'lib/audioManager'
+
+Device = require 'util/device'
+
 _init = ->
+	if @debug 
+		console.info 'Init Index Site'
 	_bindAll.call @
 	_resizeHandler.call @
 _resizeHandler = ->
@@ -46,11 +57,22 @@ _unbind = (ev) ->
 #
 # Allows user to turn on/off tracking for various site-wide events
 SiteClass = class SiteClass
+	debug: true;
 	_events:
 		resize: _resizeHandler
 		orientation: _orientationHandler
 
-	initialize: ->
+	initialize:(options) ->
+		@device = Device
+		if @debug and @device.values.chrome
+            @stats = new MemoryStats()
+            @renderStats();
+            console.info 'App options:', options
+
+        @share = new Share
+        @auth = new AuthManager()
+        
+       	@animate()
 		_init.call @
 
 	on: (ev) ->
@@ -63,6 +85,20 @@ SiteClass = class SiteClass
 			_unbindAll.call @
 		else
 			_bind.call @, ev
+	animate:()=>
+        requestAnimationFrame(@animate)
+        if(@debug)
+            @stats.update()
+
+        null
+    renderStats: ()=>
+        @stats.domElement.style.position = 'fixed'
+        @stats.domElement.style.right = '0px'
+        @stats.domElement.style.bottom = '0px'
+        document.body.appendChild(@stats.domElement)
+
+        null
+
 
 SiteInstance = new SiteClass
 module.exports = SiteInstance

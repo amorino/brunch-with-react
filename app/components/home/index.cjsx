@@ -5,17 +5,14 @@ Home = React.createClass
 	displayName: 'Home'
 
 	render: ->
-		# console.log 'render Home: ', @props
+		#console.log 'render Home: ', @props
 		styles = {}
 		hH = @props.params.site.header_height
 		styles['padding-top'] = if hH then hH else 0
 
 		<div className="hero-unit" style={styles}>
-        	<h1>React - Flux in Coffee</h1>
+        	<h1>Welcome</h1>
         	<p>Home</p>
-        	<ul>
-            	<li>Foo (Studio)</li>
-        	</ul>
       	</div>
 
 module.exports = Home

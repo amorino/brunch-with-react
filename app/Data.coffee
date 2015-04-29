@@ -13,13 +13,13 @@ class Data
 
     init:=>
         if App.LIVE
-            @url.endPoint = ""
-            @id.FB = ""
-            @id.GA = ""
+            @url.endPoint = "//private-a85a3-unbreakeable.apiary-mock.com"
+            @id.FB = "668174739995434"
+            @id.GA = "ua2423423"
         else
-            @url.endPoint = ""
-            @id.FB = ""
-            @id.GA = ""
+            @url.endPoint = "//private-a85a3-unbreakeable.apiary-mock.com"
+            @id.FB = "668174739995434"
+            @id.GA = "ua2423423"
 
         # @getUserInfo()
         @callback?()
@@ -31,7 +31,7 @@ class Data
             url: @url.endPoint + "/gallery"
             dataType: "json"
             data:
-                "email"     : "erick@foostudio.mx"
+                "email"     : "homero.sousa@gmail.com"
                 "raceNumber": "12345"
             done: (e)=>
                 @isRequestUserInfo = true

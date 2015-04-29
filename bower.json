@@ -14,7 +14,7 @@
         "javascript-state-machine": "~2.3.0",
         "react-router": "*",
         "modernizr": "~2.8.3",
-        "bootstrap-sass": "~3.3.4",
+        "bootstrap" : "~3.3.4",
         "jquery": "~2",
         "h5bp-helpers": "~0.1",
         "font-awesome": "~4",
@@ -22,12 +22,14 @@
         "gsap": "~1.15.1",
         "moment": "~2.9.0",
         "mathjs": "~1.2.0",
-        "bowser": "~0.7.2",
         "memory-stats": "*",
         "neat": "~1.7.1",
         "bourbon": "4.2.1",
         "pixi.js": "~2.2.8",
-        "howl": "~0.0.2"
+        "howl": "~0.0.2",
+        "lodash": "~2",
+        "react-bootstrap" : "*",
+        "react-router-bootstrap" : "~0.8.3"
     },
     "overrides": {
         "react": {

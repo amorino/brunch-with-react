@@ -3,7 +3,7 @@ Facebook  = require "lib/facebook"
 class AuthManager
     constructor:()->
         if App.debug
-            console.info "Auth Manager init"
+            console.info "Auth Manager"
 
     login:(service,callback=null)=>
         $dataDfd = $.Deferred()

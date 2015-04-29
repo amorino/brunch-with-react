@@ -11,11 +11,8 @@ About = React.createClass
 		styles['padding-top'] = if hH then hH else 0
 
 		<div className="hero-unit" style={styles}>
-        	<h1>'Allo, 'Allo!</h1>
+        	<h1>Welcome</h1>
         	<p>About</p>
-        	<ul>
-            	<li>Foo (Studio)</li>
-        	</ul>
       	</div>
 
 module.exports = About
