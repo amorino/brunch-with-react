@@ -1,29 +1,33 @@
-
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+.example-enter & {
+    position: absolute;
+    opacity: 0;
+    transform: translate(-250px, 0);
+    transform: translate3d(-250px, 0, 0);
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 40%;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
+.example-enter.example-enter-active & {
+    opacity: 1;
+    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.example-leave & {
+    position: absolute;
+    opacity: 1;
+    transform: translate(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
+
+.example-leave.example-leave-active & {
+    opacity: 0;
+    transform: translate(250px, 0);
+    transform: translate3d(250px, 0, 0);
+}
+
+

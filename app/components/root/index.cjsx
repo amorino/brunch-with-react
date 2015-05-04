@@ -3,9 +3,9 @@
 
 # Stores
 
-SiteConst = require 'components/site/const'
-SiteActions = require 'components/site/actions'
-SiteStore = require 'components/site/store'
+Constants = require 'components/site/const'
+Actions = require 'components/site/actions'
+Store = require 'components/site/store'
 
 # Helpers and utilities
 SyncState = require 'util/mixins/syncstate'
@@ -25,29 +25,37 @@ pages = ['home', 'about']
 
 Root = React.createClass
 	displayName: 'Root'
-	mixins: [SyncState, Router.State]
+	mixins: [ Router.State, SyncState]
+	contextTypes: 
+		router: React.PropTypes.func
 	stores:
-		site: SiteStore
+		site: Store
 
 	render: ->
-		# console.log 'render', @state
+		#console.log @state.site
+		# name = @getRoutes().reverse()[0].name
+		router = @context.router;
+		@name = @getRoutes()[1].name
+		#console.log @name
+
 		# Determine page-slide transition direction
+
 		<div id="Root">
 			<Header />
-			<TransitionGroup transitionName="page">
-				<RouteHandler params={{site: @state.site}} />
+			<TransitionGroup transitionName="example" component='div' className='container'>
+				<RouteHandler key={@name}/>
 			</TransitionGroup>
 		</div>
 
 	componentDidMount: ->
-		SiteActions.call null, SiteConst.SET_HEADER_HEIGHT, document.getElementById('Header').getBoundingClientRect().height
+ 		Actions.call null, Constants.SET_HEADER_HEIGHT, document.getElementById('header').getBoundingClientRect().height
 
 # Route Definitions
 routes = (
   <Route name="app" handler={Root} path="/">
     <DefaultRoute handler={Home} />
     <Route name="home" handler={Home} />
-     <Route name="about" handler={About} />
+    <Route name="about" handler={About} />
     <NotFoundRoute handler={Home}/>
     <Redirect from="/" to="home" />
   </Route>

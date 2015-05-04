@@ -49,6 +49,7 @@ __bindStores = (stores, callback) ->
 	callback = @_syncWithStores unless callback
 	for store in stores
 		store.instance.on 'change', callback, @
+		
 __unbindStores = ->
 	for store in stores
 			store.instance.off()

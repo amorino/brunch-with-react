@@ -1,8 +1,11 @@
 # @cjsx React.DOM
 'use strict'
 
+App = require 'components/site/index'
+
 view = (window or document)
-view.App = require 'components/site'
+
+view.App = App
 
 options = {}
 

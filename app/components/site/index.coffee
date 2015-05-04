@@ -71,6 +71,7 @@ SiteClass = class SiteClass
 
         @share = new Share
         @auth = new AuthManager()
+        @breakpoint = new Breakpoint
         
        	@animate()
 		_init.call @

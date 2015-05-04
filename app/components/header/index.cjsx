@@ -14,7 +14,7 @@ Header = React.createClass
 
 	render: ->
 		# console.log 'render Header: ', @props
-		<header id="Header">
+		<header id="header">
 			<Navbar brand='React-Brunch' toggleNavKey={0}>
 		    	<Nav eventKey={0}>
 		      		<NavItemLink to='home' href='#'>Home</NavItemLink>
