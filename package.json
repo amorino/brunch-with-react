@@ -6,7 +6,8 @@
   "scripts": {
     "start": "brunch watch -s",
     "install": "bower install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "brunch build --production"
   },
   "private": false,
   "authors": [

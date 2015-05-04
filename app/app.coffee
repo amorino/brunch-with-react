@@ -18,6 +18,5 @@ initialize = ->
 	view.App.initialize( options )
 	React.initializeTouchEvents(true)
 	require 'components/root'
-	# React.render <Root />, document.getElementById('Site-Container') if Root
 
 initialize()
