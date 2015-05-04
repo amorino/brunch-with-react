@@ -3,6 +3,7 @@ A boilerplate for React/Flux with Brunch and CoffeScript
 
 ## Brunch
 ![bwc-logo](http://brunch.io/images/svg/brunch.svg)
+
 [Brunch](http://brunch.io) and [React](http://facebook.github.io/react/).
 
 ## Getting started
