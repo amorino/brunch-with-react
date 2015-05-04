@@ -16,7 +16,7 @@ exports.config =
 					'bower_components/react/react-with-addons.min.js'
 				]
 		stylesheets:
-      		defaultExtension: 'scss'
-      		joinTo: 
-        		'styles/app.css': /^(app)/
-        		'styles/vendor.css': /^(?!app)/
+			defaultExtension: 'scss'
+			joinTo: 
+				'styles/app.css': /^(app)/
+				'styles/vendor.css': /^(?!app)/
